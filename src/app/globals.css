@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F4F6F2;
+  --foreground: #17251F;
+  --card: #FFFFFF;
+  --primary: #245C43;
+  --primary-foreground: #FFFFFF;
+  --muted: #E8EBE6;
+  --border: #D4D9D0;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #0F1613;
+  --foreground: #F4F6F2;
+  --card: #17251F;
+  --muted: #1E3328;
+  --border: #2A4437;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-lg: var(--radius);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html.dark body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+html.dark .bg-white {
+  background-color: var(--card) !important;
+}
+
+html.dark .bg-zinc-50 {
+  background-color: var(--muted) !important;
+}
+
+html.dark .bg-zinc-100 {
+  background-color: var(--background) !important;
+}
+
+html.dark .text-zinc-900,
+html.dark .text-zinc-950 {
+  color: var(--foreground) !important;
+}
+
+html.dark .ring-offset-white {
+  --tw-ring-offset-color: #17251F;
+}
